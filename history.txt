@@ -70,3 +70,19 @@
    70  git push -u origin master
    71  history
    72  history > history.txt
+   73  git status
+   74  git commit -m "update history"
+   75  git commit -am "update history"
+   76  gitk
+   77  git push
+   78  cd ..
+   79  mkdir git
+   80  cd git
+   81  git clone https://github.com/engineerOfLies/IT635Spring17.git
+   82  ls
+   83  cd IT635Spring17/
+   84  ls
+   85  gitk
+   86  history
+   87  ls
+   88  history > history.txt 
