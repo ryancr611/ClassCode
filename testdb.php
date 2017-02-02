@@ -1,23 +1,16 @@
 #!/usr/bin/php
 <?php
-$db = new mysqli("localhost","root","12345","Classes");
-// this is a C++ style comment
-/* this is a C style comment*/
-# this is a shell style comment
 
-if ($db->connect_errno != 0)
-{
-	echo "error connecting to databse: ".$db->connect_error.PHP_EOL;
-	exit();
-}
+require_once("studentDB.inc");
 
-echo "successfully connected!".PHP_EOL;
+echo "executing script: ".$argv[0].PHP_EOL;
 
-$query = "select * from class;";
 
-$db->query($query);
+$studentDB = new StudentAccess("Classes");
 
-$db->close();
+$students = $studentDB->getStudentRecords();
 
-echo "program complete".PHP_EOL;
+echo "student records in db are:".PHP_EOL;
+print_r($students);
+echo $argv[0]." complete".PHP_EOL;
 ?>
