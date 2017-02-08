@@ -6,7 +6,7 @@ private $db;
 
 public function __construct($database)
 {
-	$this->db = new mysqli("localhost","root","12345",$database);
+	$this->db = new mysqli("localhost","root","gaming611",$database);
 	if ($this->db->connect_errno != 0)
 	{
 		echo "error connecting to databse: ".$this->db->connect_error.PHP_EOL;
